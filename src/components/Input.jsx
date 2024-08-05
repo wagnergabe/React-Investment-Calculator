@@ -1,51 +1,22 @@
-import { useState } from "react";
+function Input({onHandleInvestment, onHandleAnnual, onHandleReturn, onHandleDuration, initialInvestment, annualInvestment, expectedReturn, duration}) {
 
-function Input() {
-  const [initialInvestment, setinitialInvestment] = useState(150000);
-  const [annualInvestment, setAnnualInvestment] = useState(1000);
-  const [expectedReturn, setReturn] = useState(6);
-  const [duration, setDuration] = useState(10);
-
-  function handleInvestment(e) {
-    setinitialInvestment(prevUserInput => {
-        prevUserInput + e.target.value;
-    });
-  }
-
-  function handleAnnualInvestment(e) {
-    setAnnualInvestment(prevUserInput => {
-        prevUserInput + e.target.value
-    })
-  };
-
-  function handleReturns(e) {
-    setReturn(prevUserInput => {
-        prevUserInput + e.target.value
-    })
-  };
-
-  function handleDuration(e)  {
-    setDuration(prevUserInput => {
-        prevUserInput + e.target.value
-    })
-  }
 
   return (
     <section id="user-input">
-      <div class="input-group">
+      <div className="input-group">
         <p>
           <label>Initial Investment</label>
           <input
             type="number" required
             value={initialInvestment}
-            onChange={handleInvestment}
+            onChange={onHandleInvestment}
           />
         </p>
         <p>
           <label>Annual Investment</label>
           <input type="number" required
           value={annualInvestment}
-          onChange={handleAnnualInvestment}/>
+          onChange={onHandleAnnual}/>
         </p>
       </div>
       <div class="input-group">
@@ -53,14 +24,14 @@ function Input() {
           <label>Expected Return</label>
           <input type="number" required
            value={expectedReturn}
-           onChange={handleReturns}
+           onChange={onHandleReturn}
           />
         </p>
         <p>
           <label>Duration</label>
           <input type="number" required
            value={duration}
-           onChange={handleDuration}
+           onChange={onHandleDuration}
           />
         </p>
       </div>
