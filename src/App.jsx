@@ -9,27 +9,19 @@ function App() {
   const [duration, setDuration] = useState(10);
 
   function handleInvestment(e) {
-    setinitialInvestment((prevUserInput) => {
-      prevUserInput + e.target.value;
-    });
+    setinitialInvestment(prev => (prev, +e.target.value))
   }
 
   function handleAnnualInvestment(e) {
-    setAnnualInvestment((prevUserInput) => {
-      prevUserInput + e.target.value;
-    });
+    setAnnualInvestment(prev => (prev, +e.target.value));
   }
 
   function handleReturns(e) {
-    setReturn((prevUserInput) => {
-      prevUserInput + e.target.value;
-    });
+    setReturn((prev, +e.target.value));
   }
 
   function handleDuration(e) {
-    setDuration((prevUserInput) => {
-      prevUserInput + e.target.value;
-    });
+    setDuration((prev, +e.target.value));
   }
 
   return (
