@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Input from "./components/Input.jsx";
+import Results from './components/Results.jsx';
 
 function App() {
   const [initialInvestment, setinitialInvestment] = useState(150000);
@@ -45,6 +46,10 @@ function App() {
         duration = {duration}
         // need to consolidate this somehow....
       />
+      <Results  initialInvestment = {initialInvestment}
+        annualInvestment = {annualInvestment}
+        expectedReturn = {expectedReturn}
+        duration = {duration}/>
     </>
   );
 }

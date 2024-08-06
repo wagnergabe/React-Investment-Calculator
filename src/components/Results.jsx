@@ -1,5 +1,5 @@
-function Results() {
-
+function Results({ initialInvestment, annualInvestment, expectedReturn, duration}) {
+console.log(initialInvestment)
     return (<>
     <p>results</p>
     </>
