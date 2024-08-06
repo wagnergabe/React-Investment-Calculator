@@ -8,6 +8,9 @@ function App() {
   const [expectedReturn, setReturn] = useState(6);
   const [duration, setDuration] = useState(10);
 
+
+  const validInput = duration >= 1;
+
   function handleInvestment(e) {
     setinitialInvestment(prev => (prev, +e.target.value))
   }
@@ -17,11 +20,11 @@ function App() {
   }
 
   function handleReturns(e) {
-    setReturn((prev, +e.target.value));
+    setReturn(prev => (prev, +e.target.value));
   }
 
   function handleDuration(e) {
-    setDuration((prev, +e.target.value));
+    setDuration(prev => (prev, +e.target.value));
   }
 
   return (
@@ -38,10 +41,11 @@ function App() {
         duration = {duration}
         // need to consolidate this somehow....
       />
-      <Results  initialInvestment = {initialInvestment}
+      {validInput ? <Results  initialInvestment = {initialInvestment}
         annualInvestment = {annualInvestment}
         expectedReturn = {expectedReturn}
-        duration = {duration}/>
+        duration = {duration}/> :
+        <p style={{ textAlign: "center" }}>Please enter a duration greater than zero.</p>}
     </>
   );
 }
