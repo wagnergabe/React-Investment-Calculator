@@ -15,7 +15,7 @@ This project is a **React Investment Calculator** that allows users to estimate 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/react-investment-calculator.git
+    git clone https://github.com/wagnergabe/react-investment-calculator.git
     ```
 
 2. Navigate to the project directory:
