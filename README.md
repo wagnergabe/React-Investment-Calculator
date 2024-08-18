@@ -1,4 +1,6 @@
 # React Investment Calculator
+[Link to App] https://lambent-rabanadas-6b6b9b.netlify.app/
+
 
 This project is a **React Investment Calculator** that allows users to estimate the future value of an investment based on their input. The user can input the initial investment, annual investment, expected return rate, and the investment duration. The calculator then displays the projected results.
 
